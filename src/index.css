@@ -1,13 +1,110 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+  border:1px solid black;
+  transition: all 0.08s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.calc{
+  color: aliceblue;
+  background-color: rgb(29, 12, 45);
+  display: grid;
+  grid-template-areas:
+    "Exp Exp Exp Exp"
+    "Res Res Res Res" 
+    "AC AC Div Mul"
+    "vii viii ix Min"
+    "iv v vi Plus"
+    "i ii iii Eq"
+    "noth noth dic Eq";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+
+}
+.calcExp{
+  grid-area: Exp;
+  color: brown;
+}
+.calcRes{
+  grid-area: Res;
+}
+.calcAC{
+  cursor: pointer;
+  grid-area: AC;
+  background-color: brown;
+}
+.calcDiv{
+  grid-area: Div;
+}
+.calcMul{
+  grid-area: Mul;
+}
+.calcMin{
+  grid-area: Min;
+}
+.calcPlus{
+  grid-area: Plus;
+}
+.calcEq{
+  grid-area: Eq;
+  background-color: rgb(69, 69, 108);
+  cursor: pointer;
+}
+.calc1{
+  grid-area:i;
+}
+.calc2{
+  grid-area:ii;
+}
+.calc3{
+  grid-area:iii;
+}
+.calc4{
+  grid-area:iv;
+}
+.calc5{
+  grid-area:v;
+}
+.calc6{
+  grid-area:vi;
+}
+.calc7{
+  grid-area:vii;
+}
+.calc8{
+  grid-area:viii;
+}
+.calc9{
+  grid-area:ix;
+}
+.calc0{
+  grid-area:noth;
+}
+.calcDot{
+  grid-area:dic;
+}
+.Op{
+  background-color: rgb(91, 83, 109);
+  cursor: pointer;
+}
+.nbr{
+  background-color: rgb(63, 63, 63);
+  cursor: pointer;
+}
+.c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nbr:active,.Op:active,.calcEq:active,.calcAC:active{
+  border-color: rgb(16, 92, 92);
+  color: black;
+  background-color: azure;
+  scale: 110%;
 }
